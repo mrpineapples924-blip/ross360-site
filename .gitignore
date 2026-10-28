@@ -1,0 +1,5 @@
+raw/
+brand/
+.vercel/
+.DS_Store
+tours.json

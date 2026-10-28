@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ross 360 | Austin Real Estate Photography, Drone & Zillow 3D Tours</title>
+<meta name="description" content="Real estate photography, drone, cinematic video, Zillow 3D tours, twilight shots and virtual staging across Austin, TX and a 45-mile radius. 24-hour delivery.">
+<meta property="og:title" content="Ross 360 | Austin Real Estate Media">
+<meta property="og:description" content="Photography, drone, video, Zillow 3D tours, twilight and virtual staging for Austin listings. 24-hour delivery.">
+<meta property="og:image" content="img/hero-twilight-lake.webp">
+<meta name="theme-color" content="#2e1a2f">
+<meta name="author" content="Ross 360 · Henry Brown">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-twilight-lake.webp">
+<style>
+:root{
+  --ink:#1c1420; --ink-2:#3b333f; --muted:#5d5562;
+  --paper:#f8f5f7; --card:#ffffff; --line:#e7dfe5; --line-2:#d9ccd5;
+  --plum:#573F4C; --plum-deep:#42243D; --night:#2e1a2f; --mauve:#e6d3e2; --tint:#f3ecf1;
+  --max:1200px; --font:'Jost',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:300;text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+h2{font-size:clamp(1.7rem,3.3vw,2.5rem);margin-bottom:40px}
+.eyebrow{font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--plum);margin-bottom:16px}
+.lede{color:var(--ink-2);font-size:1.075rem;max-width:56ch}
+section{padding:110px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;font-family:inherit;font-weight:500;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--plum-deep)}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.on-dark .btn-line:hover{background:#fff;color:var(--night);border-color:#fff}
+.btn-white{background:#fff;color:var(--night)}
+.btn-white:hover{background:var(--mauve)}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--mauve)}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .25s,box-shadow .25s}
+header.solid,header.menu-open{background:rgba(248,245,247,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo img{height:46px;width:auto}
+.logo .dark{display:none}
+header.solid .logo .light,header.menu-open .logo .light{display:none}
+header.solid .logo .dark,header.menu-open .logo .dark{display:block}
+.nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.nav ul a:not(.btn):hover{color:var(--mauve)}
+header.solid .nav ul a:not(.btn){color:var(--ink-2)}
+header.solid .nav ul a:not(.btn):hover{color:var(--plum)}
+.nav .btn{padding:11px 20px;border-color:#fff;color:#fff}
+.nav .btn:hover{background:#fff;color:var(--night)}
+header.solid .nav .btn{background:var(--plum);border-color:var(--plum);color:#fff}
+header.solid .nav .btn:hover{background:var(--plum-deep)}
+.menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:10px}
+header.solid .menu-btn,header.menu-open .menu-btn{color:var(--ink)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;padding:0 0 92px;background:var(--night)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,14,30,.5) 0%,rgba(30,14,30,0) 30%,rgba(30,14,30,.15) 55%,rgba(30,14,30,.84) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero .eyebrow{color:var(--mauve)}
+.hero h1{font-size:clamp(2.2rem,5.2vw,4.3rem);max-width:17ch;margin-bottom:24px}
+.hero h1 span{color:var(--mauve)}
+.hero p{font-size:1.125rem;max-width:56ch;color:rgba(255,255,255,.9);margin-bottom:34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* stats */
+.stats{background:var(--night);color:#fff;padding:34px 0}
+.stats ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stats strong{display:block;font-weight:300;font-size:1.9rem;letter-spacing:.06em;color:var(--mauve);line-height:1.15}
+.stats span{font-size:.9rem;color:rgba(255,255,255,.78)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.svc-more{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-2)}
+.svc-more strong{font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--plum);margin-right:8px}
+.svc .media{aspect-ratio:4/3;overflow:hidden;background:var(--tint)}
+.svc .media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.svc:hover .media img{transform:scale(1.03)}
+.svc h3{font-size:1.15rem;margin:18px 0 6px}
+.svc p{color:var(--muted);font-size:.98rem}
+
+/* pricing */
+.pricing{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.tier{padding:38px 28px;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.tier:first-child{padding-left:0}
+.tier:last-child{border-right:0;background:var(--tint);padding-right:28px}
+.tier .for{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.tier h3{font-size:1.5rem;margin-top:22px}
+.tier .price{font-weight:300;font-size:2.7rem;letter-spacing:.04em;margin:4px 0 20px}
+.tier ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.97rem;color:var(--ink-2);margin-bottom:32px}
+.tier li::before{content:"– "}
+.tier .btn{margin-top:auto;align-self:flex-start}
+.addons-h{font-size:1.4rem;margin:64px 0 6px}
+.addons{border-top:1px solid var(--line-2);margin-top:18px}
+.addon{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.addon strong{font-weight:400;font-size:1.15rem;display:block}
+.addon span{color:var(--muted);font-size:.95rem}
+.addon .amt{font-weight:300;font-size:1.5rem;letter-spacing:.04em;white-space:nowrap}
+
+/* twilight */
+.twilight{background:var(--night);color:#fff}
+.twilight .eyebrow{color:var(--mauve)}
+.twilight .lede{color:rgba(255,255,255,.8)}
+.tw-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:center}
+.tw-grid h2{margin-bottom:20px}
+.compare{position:relative;aspect-ratio:4/3;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .top{transition:opacity .9s ease}
+.compare.day .top{opacity:0}
+.toggle{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;padding:4px;background:rgba(30,14,30,.65);backdrop-filter:blur(6px)}
+.toggle button{border:0;background:none;color:#fff;font:500 .75rem var(--font);letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;cursor:pointer;min-height:44px}
+.toggle button[aria-pressed=true]{background:#fff;color:var(--ink)}
+.tw-more{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.tw-more img{aspect-ratio:4/3;object-fit:cover;width:100%}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery button{display:block;width:100%;padding:0;border:0;background:var(--tint);cursor:zoom-in;overflow:hidden;aspect-ratio:4/3}
+.gallery button:first-child{grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery button:hover img{transform:scale(1.03)}
+.pf-foot{margin-top:36px;text-align:center}
+.pf-foot a{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--plum)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(18,10,18,.96);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:86vh}
+.lb button{position:absolute;background:rgba(255,255,255,.1);border:0;color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.22)}
+.lb .x{top:20px;right:20px}.lb .prev{left:20px;top:50%;margin-top:-24px}.lb .next{right:20px;top:50%;margin-top:-24px}
+.lb .count{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:rgba(255,255,255,.65);font-size:.85rem;letter-spacing:.1em}
+
+/* tours */
+.tours{background:var(--card);border-top:1px solid var(--line)}
+.tours-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.tours-grid h2{margin-bottom:18px}
+.tour-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tour-list a{border:1px solid var(--line);background:var(--paper)}
+.tour-list a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;text-decoration:none;font-size:.9rem;letter-spacing:.06em}
+.tour-list a:hover{background:var(--card);color:var(--plum);border-color:var(--plum)}
+.tour-list a span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.tour-feature{position:sticky;top:104px}
+.tour-card{position:relative;display:block;overflow:hidden;aspect-ratio:4/3;text-decoration:none;color:#fff}
+.tour-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tour-card:hover img{transform:scale(1.04)}
+.tour-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(30,14,30,.84))}
+.tour-card .ov{position:absolute;left:24px;right:24px;bottom:22px;z-index:1}
+.tour-card .ov small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mauve)}
+.tour-card .ov strong{display:block;font-weight:300;font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase}
+.tour-card .play{position:absolute;z-index:1;top:50%;left:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--plum);font-size:.7rem;font-weight:500;letter-spacing:.14em}
+.tour-note{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+/* area */
+.area-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.area-grid h2{margin-bottom:18px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;list-style:none}
+.towns li{padding:7px 14px;border:1px solid var(--line-2);font-size:.85rem;letter-spacing:.06em;background:var(--card)}
+.radius svg{width:100%;height:auto}
+
+/* about */
+.about{background:var(--card);border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-grid h2{margin-bottom:18px}
+.about-grid img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.about .lede+.lede{margin-top:16px}
+
+/* contact */
+.contact{background:var(--night);color:#fff;text-align:center}
+.contact .logo-big{height:76px;width:auto;margin:0 auto 30px}
+.contact h2{font-size:clamp(1.9rem,4.2vw,3rem);margin-bottom:18px}
+.contact .lede{color:rgba(255,255,255,.8);margin:0 auto 34px}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-meta{margin-top:30px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font-size:.95rem;color:rgba(255,255,255,.8)}
+.contact-meta a{text-decoration:none}
+.contact-meta a:hover{color:var(--mauve)}
+footer{background:#1d101e;color:rgba(255,255,255,.6);font-size:.8rem;letter-spacing:.08em;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+@media (max-width:1000px){
+  .tiers{grid-template-columns:1fr 1fr}
+  .tier{border-bottom:1px solid var(--line)}
+  .tier:first-child{padding-left:28px}
+  .tier:nth-child(2){border-right:0}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .tw-grid,.tours-grid,.area-grid,.about-grid{grid-template-columns:1fr;gap:40px}
+  .tour-feature{position:static}
+  .stats ul{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:76px 0}
+  .menu-btn{display:block}
+  .logo img{height:38px}
+  .nav ul{display:none;position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 16px 18px}
+  .nav ul.open{display:flex}
+  .nav ul a:not(.btn){color:var(--ink)!important;display:block;padding:14px 0}
+  .nav ul .btn{margin-top:8px;width:100%;background:var(--plum);border-color:var(--plum)}
+  .tiers{grid-template-columns:1fr}
+  .tier,.tier:first-child,.tier:last-child{padding:32px 20px;border-right:0}
+  .svc-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;gap:10px}
+  .tour-list{grid-template-columns:1fr 1fr}
+  .hero{padding-bottom:64px}
+  .tw-more{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Ross 360 home">
+      <img class="light" src="img/logo-lockup-white.webp" alt="Ross 360" width="126" height="46">
+      <img class="dark" src="img/logo-lockup.webp" alt="Ross 360" width="126" height="46">
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#tours">3D Tours</a></li>
+      <li><a href="#contact" class="btn">Book a shoot</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero on-dark" aria-label="Introduction">
+    <img src="img/hero-twilight-lake.webp" alt="Rooftop deck overlooking Lake Austin at twilight" fetchpriority="high">
+    <div class="wrap">
+      <p class="eyebrow">Austin real estate media</p>
+      <h1>Every listing, shown at its <span>best.</span></h1>
+      <p>Photography, drone, cinematic video, Zillow 3D tours, twilight shots and virtual staging for agents, sellers and landlords across Austin.</p>
+      <div class="ctas">
+        <a href="#contact" class="btn btn-plum">Book a shoot</a>
+        <a href="#pricing" class="btn btn-line">See pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats" aria-label="At a glance">
+    <ul class="wrap">
+      <li><strong>300+</strong><span>3D tours completed</span></li>
+      <li><strong>$200</strong><span>Lease listings start here</span></li>
+      <li><strong>45 mi</strong><span>Radius around Austin</span></li>
+      <li><strong>24 hr</strong><span>Photo delivery</span></li>
+    </ul>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Services</p>
+        <h2>Everything a listing needs</h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <div class="media"><img src="img/modern-living.webp" alt="Bright double-height living room with lake views" loading="lazy"></div>
+          <h3>Photography</h3>
+          <p>Bright, true-to-life interiors and exteriors, edited and ready for the MLS, Zillow and social.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="media"><img src="img/lake-deck.webp" alt="Deck with a wide Lake Austin view" loading="lazy"></div>
+          <h3>Zillow 3D Tours</h3>
+          <p>Immersive walkthroughs with an interactive floor plan, published right on the Zillow listing.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="media"><img src="img/twilight-exterior.webp" alt="Home exterior photographed at dusk with warm lights" loading="lazy"></div>
+          <h3>Twilight Shots</h3>
+          <p>Dusk exteriors with glowing windows and color in the sky. The shot that stops the scroll.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="media"><img src="img/bright-living.webp" alt="Empty living room with tall windows, ready to be staged" loading="lazy"></div>
+          <h3>Virtual Staging</h3>
+          <p>Empty rooms like this one, furnished digitally in a style that fits the home.</p>
+        </article>
+      </div>
+      <p class="svc-more reveal"><strong>Also available:</strong> drone aerials (up to 15 images) and cinematic listing video, included in the Premier and Signature packages.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2 style="margin-bottom:12px">Priced by listing</h2>
+        <p class="lede" style="margin-bottom:44px">Pick the package that fits the home. Add extras below.</p>
+      </div>
+      <div class="tiers reveal">
+        <div class="tier">
+          <div class="for">Lease listings</div>
+          <h3>Lease</h3>
+          <div class="price">$200</div>
+          <ul><li>Photos only</li><li>Interiors and exteriors</li><li>24-hour online delivery</li></ul>
+          <a href="#contact" class="btn btn-line">Book Lease</a>
+        </div>
+        <div class="tier">
+          <div class="for">Listings under $600K</div>
+          <h3>Classic</h3>
+          <div class="price">$325</div>
+          <ul><li>Full photo package</li><li>Property website and flyers</li><li>Premium editing, MLS-ready sizing</li><li>24-hour online delivery</li></ul>
+          <a href="#contact" class="btn btn-line">Book Classic</a>
+        </div>
+        <div class="tier">
+          <div class="for">Listings $600K to $1M</div>
+          <h3>Premier</h3>
+          <div class="price">$799</div>
+          <ul><li>Full photo package</li><li>Property website and flyers</li><li>Zillow 3D tour + floor plan</li><li>Up to 15 drone aerial images</li><li>24-hour online delivery</li></ul>
+          <a href="#contact" class="btn btn-line">Book Premier</a>
+        </div>
+        <div class="tier">
+          <div class="for">Listings $1M and up</div>
+          <h3>Signature</h3>
+          <div class="price">$1,549</div>
+          <ul><li>Full photo package</li><li>Property website and flyers</li><li>Zillow 3D tour + floor plan</li><li>Up to 15 drone aerial images</li><li>Cinematic video</li><li>Twilight shots</li><li>Luxury editing and retouching</li><li>24-hour photo delivery</li></ul>
+          <a href="#contact" class="btn btn-plum">Book Signature</a>
+        </div>
+      </div>
+
+      <h3 class="addons-h reveal">Add-ons</h3>
+      <p class="lede reveal">Add to any package when you book.</p>
+      <div class="addons reveal">
+        <div class="addon"><div><strong>Twilight session</strong><span>A second visit at dusk for glowing exterior shots.</span></div><div class="amt">$375</div></div>
+        <div class="addon"><div><strong>Zillow 3D Home tour</strong><span>Captured in the same visit as the photos.</span></div><div class="amt">From $200</div></div>
+        <div class="addon"><div><strong>Virtual staging</strong><span>One flat rate for up to 10 photos.</span></div><div class="amt">$100</div></div>
+        <div class="addon"><div><strong>Floor plan with measurements</strong><span>A measured plan for the listing, included at no charge.</span></div><div class="amt">Free</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="twilight on-dark" aria-labelledby="tw-h">
+    <div class="wrap tw-grid">
+      <div class="reveal">
+        <p class="eyebrow">Twilight</p>
+        <h2 id="tw-h">Same deck. Different story.</h2>
+        <p class="lede">Flip between the daytime and twilight shoots of the same Lake Austin rooftop. Twilight turns a great listing into the one people remember.</p>
+        <div class="tw-more">
+          <img src="img/twilight-patio.webp" alt="Covered patio at night with the city lights beyond" loading="lazy">
+          <img src="img/twilight-living.webp" alt="Open living space at dusk" loading="lazy">
+        </div>
+      </div>
+      <div class="compare reveal">
+        <img src="img/lake-rooftop.webp" alt="Rooftop deck during the day" loading="lazy">
+        <img class="top" src="img/hero-twilight-lake.webp" alt="The same rooftop deck at twilight" loading="lazy">
+        <div class="toggle" role="group" aria-label="Choose time of day">
+          <button type="button" data-t="day" aria-pressed="false">Day</button>
+          <button type="button" data-t="dusk" aria-pressed="true">Twilight</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Recent work</p>
+        <h2>From Hyde Park bungalows to Lake Austin modern</h2>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <p class="pf-foot"><a href="https://www.instagram.com/theross360/" target="_blank" rel="noopener">More on Instagram @theross360 →</a></p>
+    </div>
+  </section>
+
+  <section id="tours" class="tours">
+    <div class="wrap tours-grid">
+      <div class="reveal">
+        <p class="eyebrow">Zillow 3D tours</p>
+        <h2>300+ homes toured. Walk through a few.</h2>
+        <p class="lede" style="margin-bottom:28px">A sample of recent Austin tours, live on Zillow. Open one to see what buyers see.</p>
+        <ul class="tour-list" id="tour-list"></ul>
+      </div>
+      <div class="tour-feature reveal">
+        <a class="tour-card" href="https://www.zillow.com/view-imx/afbd8b5d-b24e-42e7-a95a-69e7a24a864f/" target="_blank" rel="noopener">
+          <img src="img/glass-dining.webp" alt="Glass-walled dining room overlooking the hills" loading="lazy">
+          <span class="play">3D TOUR</span>
+          <span class="ov"><small>Featured tour</small><strong>Lake Austin Estate</strong></span>
+        </a>
+        <p class="tour-note">Tours open on Zillow in a new tab.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap area-grid">
+      <div class="reveal">
+        <p class="eyebrow">Service area</p>
+        <h2>Austin, plus 45 miles in every direction</h2>
+        <p class="lede">Based in Austin and shooting across Central Texas. Not sure if you're in range? Ask.</p>
+        <ul class="towns">
+          <li>Austin</li><li>Round Rock</li><li>Cedar Park</li><li>Leander</li><li>Georgetown</li><li>Pflugerville</li>
+          <li>Hutto</li><li>Manor</li><li>Lakeway</li><li>Bee Cave</li><li>Dripping Springs</li><li>Buda</li>
+          <li>Kyle</li><li>San Marcos</li><li>Bastrop</li><li>Lockhart</li><li>Liberty Hill</li><li>Taylor</li>
+        </ul>
+      </div>
+      <div class="radius reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="180" fill="#573F4C" fill-opacity=".07" stroke="#573F4C" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <circle cx="200" cy="200" r="120" fill="none" stroke="#573F4C" stroke-opacity=".3" stroke-width="1"/>
+          <circle cx="200" cy="200" r="60" fill="none" stroke="#573F4C" stroke-opacity=".3" stroke-width="1"/>
+          <g font-family="Jost,sans-serif" font-size="12" fill="#3b333f" letter-spacing="1">
+            <circle cx="200" cy="200" r="7" fill="#573F4C"/><text x="212" y="205" font-weight="500" fill="#1c1420" font-size="13">AUSTIN</text>
+            <circle cx="214" cy="128" r="4" fill="#1c1420"/><text x="222" y="132">Round Rock</text>
+            <circle cx="206" cy="80" r="4" fill="#1c1420"/><text x="214" y="84">Georgetown</text>
+            <circle cx="160" cy="118" r="4" fill="#1c1420"/><text x="88" y="114">Cedar Park</text>
+            <circle cx="244" cy="148" r="4" fill="#1c1420"/><text x="252" y="160">Pflugerville</text>
+            <circle cx="122" cy="210" r="4" fill="#1c1420"/><text x="62" y="228">Lakeway</text>
+            <circle cx="186" cy="290" r="4" fill="#1c1420"/><text x="194" y="294">Kyle</text>
+            <circle cx="168" cy="340" r="4" fill="#1c1420"/><text x="176" y="344">San Marcos</text>
+            <circle cx="320" cy="232" r="4" fill="#1c1420"/><text x="282" y="252">Bastrop</text>
+            <circle cx="112" cy="280" r="4" fill="#1c1420"/><text x="34" y="298">Dripping Springs</text>
+          </g>
+          <text x="200" y="14" text-anchor="middle" font-family="Jost,sans-serif" font-size="11" font-weight="500" letter-spacing="3" fill="#573F4C">45 MILES</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <img class="reveal" src="img/craftsman-exterior.webp" alt="Two-story craftsman home on a leafy Austin street" loading="lazy">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">Hi, I'm Henry.</h2>
+        <p class="lede">I'm an Austin native, and Ross 360 is my company. I've captured more than 300 3D tours across town, from Hyde Park bungalows and East Austin modern builds to a $19.5M estate on Lake Austin.</p>
+        <p class="lede">You get 24-hour delivery, clear communication and photos that make people want to book a showing.</p>
+        <div style="margin-top:30px"><a href="#contact" class="btn btn-plum">Book a shoot</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact on-dark">
+    <div class="wrap reveal">
+      <img class="logo-big" src="img/logo-lockup-white.webp" alt="Ross 360" loading="lazy">
+      <h2>Let's get your listing ready.</h2>
+      <p class="lede">Send the address, your target list date and the package you want. You'll get a quick reply with availability.</p>
+      <div class="contact-links" id="contact-links">
+        <a class="btn btn-line" href="https://ig.me/m/theross360" target="_blank" rel="noopener">Message on Instagram</a>
+      </div>
+      <div class="contact-meta" id="contact-meta"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Ross 360 · Real estate media · Austin, TX</span>
+    <a href="https://www.instagram.com/theross360/" target="_blank" rel="noopener">Instagram @theross360</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <img alt="">
+  <button class="x" aria-label="Close">×</button>
+  <button class="prev" aria-label="Previous photo">‹</button>
+  <button class="next" aria-label="Next photo">›</button>
+  <div class="count"></div>
+</div>
+
+<script>
+// ---- Contact details ----
+const CONTACT = { phone: "(512) 221-3166", email: "theross360tours@gmail.com" };
+
+const PHOTOS = [
+  ["lake-rooftop","Rooftop deck on Lake Austin"],
+  ["modern-exterior","Modern home with weathered-steel siding"],
+  ["modern-living-2","Modern living room with a slatted staircase"],
+  ["open-kitchen","Open kitchen with open shelving"],
+  ["classic-living","Classic living room with original wood floors"],
+  ["white-kitchen","White kitchen with a concrete island"],
+  ["soaking-tub","Freestanding soaking tub"],
+  ["skyline-deck","Deck with a downtown skyline view"],
+  ["vintage-kitchen","Vintage kitchen with wood cabinets"],
+  ["living-rug","Living room with a red rug and hill views"],
+  ["clawfoot-bath","Clawfoot tub in a yellow bathroom"],
+  ["modern-bath","Modern bathroom with patterned tile"],
+  ["covered-patio","Covered outdoor living area"],
+  ["craftsman-bedroom","Craftsman bedroom with a vintage dresser"],
+  ["modern-bedroom","Modern bedroom with warm wood accents"],
+];
+
+const TOURS = ["https://www.zillow.com/view-imx/63f7db72-a13d-41d5-a3bd-f5a1653aaa37/","https://www.zillow.com/view-imx/f8e87565-9437-4c48-baf7-b3b604ebcb85/","https://www.zillow.com/view-imx/990ca554-3705-4ec6-8e8b-8abf2d34f43f/","https://www.zillow.com/view-imx/0c1ace28-6823-46c3-b2e2-137bf039822b/","https://www.zillow.com/view-imx/f79006c7-0fa4-400f-a095-c163eb0f5f4c/","https://www.zillow.com/view-imx/37485987-f23a-4ea8-b994-850c6339a9f4/","https://www.zillow.com/view-imx/088e00a3-d203-421a-8288-8416e292ac27/","https://www.zillow.com/view-imx/2d0c0e7f-3664-4565-91c5-0f8f3588fa32/","https://www.zillow.com/view-imx/264ebaa5-e0f4-4a1e-9866-c41340e2742d/","https://www.zillow.com/view-3d-home/85c3ef23-9a98-4ca6-b476-b886822436e4/","https://www.zillow.com/view-imx/5fafd1d1-24db-48cd-b0ab-87c2ae7910dd/","https://www.zillow.com/view-imx/a0abea85-c148-4afe-9358-673f65b620b3/","https://www.zillow.com/view-imx/1f2279d9-acea-4886-ad17-ef75185c968a/","https://www.zillow.com/view-imx/0cd617eb-26d1-446b-8176-4ec1b5dbd25c/","https://www.zillow.com/view-imx/429e4644-1197-4654-9fed-b7054f7156e0/","https://www.zillow.com/view-imx/e2c9c0ec-2c24-4d06-880d-cfe3a66e4b07/","https://www.zillow.com/view-imx/bd275ca9-f4e5-4661-b576-3c9fc16ca863/","https://www.zillow.com/view-imx/4162e1d4-a934-4af7-bc96-eabbd061b065/","https://www.zillow.com/view-imx/abe721ee-f461-4864-8537-1e35513da4a5/","https://www.zillow.com/view-imx/8a95b76a-40fd-4bce-9f77-88c11adeb5dd/","https://www.zillow.com/view-imx/7b48cdc1-0e78-4774-985b-2735870a237f/","https://www.zillow.com/view-imx/afbd8b5d-b24e-42e7-a95a-69e7a24a864f/","https://www.zillow.com/view-imx/727fb9e6-4a3a-49bd-84ad-aa8adb99e162/","https://www.zillow.com/view-imx/3eb175b0-327d-4f18-b643-ecf50e5a30ff/","https://www.zillow.com/view-imx/486e1ae8-aa30-44b0-80cc-8bb054603356/","https://www.zillow.com/view-imx/d48502a7-8fb1-4e02-adc3-d75e19d1a02f/","https://www.zillow.com/view-imx/91ac31b9-e4cf-405c-8f94-9d355b477cf7/","https://www.zillow.com/view-imx/0019d548-0475-4312-9746-1212c03d39e7/","https://www.zillow.com/view-imx/88a937b8-0c6b-4eb0-9b41-37f9a6edc55c/","https://www.zillow.com/view-imx/5dcf4833-3ec3-4a17-9e62-ac805b01fcf4/","https://www.zillow.com/view-imx/1a5adbc2-12f9-4ff4-9c70-292516cbac28/"];
+
+// gallery + lightbox
+const g = document.getElementById('gallery');
+PHOTOS.forEach(([f, alt], i) => {
+  const b = document.createElement('button');
+  b.setAttribute('aria-label', 'View photo: ' + alt);
+  b.innerHTML = `<img src="img/${f}.webp" alt="${alt}" loading="lazy">`;
+  b.onclick = () => openLb(i);
+  g.appendChild(b);
+});
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img'), lbCount = lb.querySelector('.count');
+let cur = 0, lastFocus;
+function show(i){ cur = (i + PHOTOS.length) % PHOTOS.length; lbImg.src = `img/${PHOTOS[cur][0]}.webp`; lbImg.alt = PHOTOS[cur][1]; lbCount.textContent = `${cur+1} / ${PHOTOS.length}`; }
+function openLb(i){ lastFocus = document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; lb.querySelector('.x').focus(); }
+function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; lastFocus && lastFocus.focus(); }
+lb.querySelector('.x').onclick = closeLb;
+lb.querySelector('.prev').onclick = () => show(cur-1);
+lb.querySelector('.next').onclick = () => show(cur+1);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') show(cur-1);
+  if (e.key === 'ArrowRight') show(cur+1);
+});
+let tx = null;
+lb.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+lb.addEventListener('touchend', e => { if (tx === null) return; const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) show(cur + (d < 0 ? 1 : -1)); tx = null; });
+
+// tours (numbered; addresses intentionally not shown)
+document.getElementById('tour-list').innerHTML = TOURS.map((u, i) =>
+  `<li><a href="${u}" target="_blank" rel="noopener">3D Tour ${String(i+1).padStart(2,'0')}<span>View ↗</span></a></li>`).join('');
+
+// twilight toggle
+const cmp = document.querySelector('.compare');
+cmp.querySelectorAll('.toggle button').forEach(b => b.onclick = () => {
+  cmp.classList.toggle('day', b.dataset.t === 'day');
+  cmp.querySelectorAll('.toggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
+});
+
+// contact
+const meta = document.getElementById('contact-meta'), links = document.getElementById('contact-links');
+if (CONTACT.phone) {
+  const tel = CONTACT.phone.replace(/[^\d+]/g,'');
+  links.insertAdjacentHTML('afterbegin', `<a class="btn btn-white" href="sms:${tel}">Text ${CONTACT.phone}</a>`);
+  meta.insertAdjacentHTML('beforeend', `<a href="tel:${tel}">Call ${CONTACT.phone}</a>`);
+}
+if (CONTACT.email) meta.insertAdjacentHTML('beforeend', `<a href="mailto:${CONTACT.email}">${CONTACT.email}</a>`);
+
+// header + mobile menu
+const header = document.querySelector('header'), menuBtn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
+const onScroll = () => header.classList.toggle('solid', scrollY > 40);
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+menuBtn.onclick = () => { const o = menu.classList.toggle('open'); header.classList.toggle('menu-open', o); menuBtn.setAttribute('aria-expanded', o); };
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); header.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
